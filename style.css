@@ -1,0 +1,80 @@
+:root {
+    --primary-color: rgb(218, 225, 255);
+    --secondary-color: rgb(230, 230, 230);
+    --text-dark-color:rgb(0, 0, 0);
+    --border-colors: rgb(0,0,90);
+    --option-background:rgb(121, 121, 121);
+    --option-border: rgb(55,55,55);
+}
+
+body {
+    height:100vh;
+    width: 100vw;
+    background-color: var(--primary-color);
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Autour One', cursive;
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    height:75vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:75vw;
+    height: 75vh;
+}
+
+.option-container {
+    width: 30%;
+    height: 100%;
+    border: 3px var(--border-colors) solid;
+    margin: 0 0 -5 0;
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sketch-container {
+    width: 60%;
+    height: 100%;
+    border: 3px var(--border-colors) solid;
+    margin: 0 0 -5 0;
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+}
+
+footer {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.option {
+    width: 80%;
+    height: 50px;
+    outline: 1px black solid;
+    background-color: var(--option-background);
+    border:2px var(--option-border) solid;
+    border-radius: 4px;
+}
