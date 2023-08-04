@@ -1,10 +1,12 @@
-:root {
-    --primary-color: rgb(218, 225, 255);
+ :root {
+    --primary-color: rgb(245, 238, 228);
     --secondary-color: rgb(230, 230, 230);
     --text-dark-color:rgb(0, 0, 0);
     --border-colors: rgb(0,0,90);
-    --option-background:rgb(121, 121, 121);
+    --option-background:rgb(218,225,255);
     --option-border: rgb(55,55,55);
+    --button-color: rgb(130, 240, 154);
+    --Etch-border: rgb(248, 62, 62);
 }
 
 body {
@@ -36,13 +38,15 @@ main {
 .main-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width:75vw;
+    justify-content: space-around;
+    max-width:75vw;
     height: 75vh;
+    gap: 20px;
+    flex:0;
 }
 
 .option-container {
-    width: 30%;
+    min-width: 30%;
     height: 100%;
     border: 3px var(--border-colors) solid;
     margin: 0 0 -5 0;
@@ -52,15 +56,21 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    flex:0;
 }
 
 .sketch-container {
-    width: 60%;
     height: 100%;
+    aspect-ratio: 1/1;
     border: 3px var(--border-colors) solid;
     margin: 0 0 -5 0;
-    background-color: var(--secondary-color);
+    background-color: var(--Etch-border);
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+    
 }
 
 footer {
@@ -72,9 +82,108 @@ footer {
 
 .option {
     width: 80%;
-    height: 50px;
+    min-height: 75px;
     outline: 1px black solid;
     background-color: var(--option-background);
     border:2px var(--option-border) solid;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:0;
 }
+
+.thin-border {
+    border: 1px solid var(--border-colors);
+}
+.btn {
+    box-shadow: -4px 4px 2px 2px rgba(0,0,0,0.2);
+    background-color: var(--button-color);
+    height: 50%;
+    width: 50%;
+    border-radius: 4px;
+}
+
+
+/* .btn:hover {
+    opacity: 0.5; */
+/* } */
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: -2px 1px 1px 1px rgba(0,0,0,0.2);
+
+}
+
+.sketch {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 80%;
+    height: 80%;
+    border: black 1px solid;
+    flex:0;
+    background-color: var(--secondary-color);
+
+}
+
+.sketchCell {
+    /* outline: 0.2px rgb(90, 90, 90) solid; */
+    margin:0;
+    padding:0;
+}
+
+#userInputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#sizeinput {
+    font-size: x-small;
+}
+#gridsize {
+    text-align: center;
+    width: 30px;
+}
+
+#inputValue {
+    width: 30px;
+    text-align: center;
+}
+
+#image-container {
+    width: 0%;
+    height: 0%;
+  }
+  
+#image {
+    width: 0%;
+    height: 0%;
+  }
+
+
+input[type="color"] {
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 30px; /* Adjust this value as needed */
+    height: 30px; /* Adjust this value as needed */
+    border-radius: 50%; /* Display as a circle */
+  }
+  
+  /* Style the circular part of the color picker */
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+
+  .option-container :nth-child(3) {
+    gap:2px;
+  } */

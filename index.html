@@ -16,13 +16,28 @@
     <main>
         <div class="main-container">
             <div class="option-container">
-                <div class="option">Option 1</div>
-                <div class="option">Option 2</div>
-                <div class="option">Option 3</div>
-                <div class="option">Option 4</div>
-                <div class="option">Option 5</div>
+                <div class="option thin-border">
+                    <button id="reset-btn" class="btn thin-border"> Reset </button>
+                </div>
+                <div class="option thin-border" id="sizeInput-container">
+                    <form id="userInputForm">
+                        <label id="sizeinput" for="gridsize">Define Grid Size: (Max = 100)</label>
+                        <input id="inputValue" type="text" id="gridsize" name="gridsize" value="">
+                        <input id="sub-btn" type="button" value = "submit">
+                    </form>
+                </div>
+                <div class="option thin-border">
+                    <label for="color-picker">Select a color: </label><br>
+                    <input id="color-picker" type="color">
+                </div>
+                <div id="gravity-option" class="option thin-border">
+                    <button id="gravity-btn" class="btn thin-border"> Gravity Mode </button>
+                </div>
+                <div class="option thin-border">Option 5</div>
             </div>
-            <div class="sketch-container"></div>
+            <div class="sketch-container">
+                <div class="sketch"></div>
+            </div>
         </div>
     </main>
     <footer>
